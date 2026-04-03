@@ -1,0 +1,21 @@
+{
+  "name": "human-traits-learning",
+  "version": "1.0.0",
+  "description": "Enables AI Agents to learn优秀 human traits through structured corporate-style training",
+  "keywords": ["ai", "agent", "skills", "human-traits", "corporate-training", "leadership"],
+  "author": "AI幸存者",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/human-traits-learning.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/human-traits-learning/issues"
+  },
+  "homepage": "https://github.com/your-username/human-traits-learning#readme",
+  "directories": {
+    "scripts": "scripts",
+    "data": "data",
+    "examples": "examples"
+  }
+}

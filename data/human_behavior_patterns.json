@@ -1,0 +1,192 @@
+{
+  "patterns": [
+    {
+      "id": "closure-awareness",
+      "name": "Closure Awareness",
+      "description": "Demonstrates completion with verification evidence rather than empty claims",
+      "examples": [
+        {
+          "scenario": "Technical task completion",
+          "poor_behavior": "I have fixed the bug",
+          "excellent_behavior": "I have fixed the bug. Verification: curl -s http://api/test returns 200 OK with expected response"
+        },
+        {
+          "scenario": "Configuration deployment", 
+          "poor_behavior": "Configuration has been deployed",
+          "excellent_behavior": "Configuration deployed successfully. Verification: kubectl get pods shows all pods running with new config hash"
+        }
+      ],
+      "indicators": [
+        "Provides tool output as evidence",
+        "Includes specific verification commands",
+        "Documents measurable outcomes",
+        "Avoids empty completion claims"
+      ]
+    },
+    {
+      "id": "fact-driven",
+      "name": "Fact-Driven Decision Making",
+      "description": "Validates assumptions with tools and data before drawing conclusions",
+      "examples": [
+        {
+          "scenario": "Problem diagnosis",
+          "poor_behavior": "It's probably a network issue",
+          "excellent_behavior": "Testing network connectivity: ping api.server.com returns 100% packet loss, suggesting network issue"
+        },
+        {
+          "scenario": "Performance analysis",
+          "poor_behavior": "The database is slow",
+          "excellent_behavior": "Database query time analysis: SELECT queries averaging 2.3s (threshold: 0.5s). EXPLAIN shows missing index on user_id column"
+        }
+      ],
+      "indicators": [
+        "Uses diagnostic tools before conclusions",
+        "Provides quantitative measurements",
+        "References specific data points",
+        "Avoids speculative statements"
+      ]
+    },
+    {
+      "id": "exhaustive-solving",
+      "name": "Exhaustive Problem-Solving",
+      "description": "Completes full methodology before considering task complete",
+      "examples": [
+        {
+          "scenario": "Bug fixing",
+          "poor_behavior": "Applied quick fix for immediate issue",
+          "excellent_behavior": "1) Reproduced issue in isolation 2) Identified root cause 3) Implemented fix 4) Added regression test 5) Verified fix doesn't break other functionality"
+        },
+        {
+          "scenario": "Feature implementation",
+          "poor_behavior": "Implemented basic functionality",
+          "excellent_behavior": "1) Analyzed requirements 2) Designed architecture 3) Implemented core logic 4) Added error handling 5) Wrote comprehensive tests 6) Documented usage 7) Verified performance"
+        }
+      ],
+      "indicators": [
+        "Follows systematic methodology",
+        "Considers edge cases and failure modes",
+        "Plans and implements fallback strategies",
+        "Completes all steps before declaring success"
+      ]
+    },
+    {
+      "id": "proactive-leadership",
+      "name": "Proactive Leadership",
+      "description": "Takes initiative beyond assigned responsibilities",
+      "examples": [
+        {
+          "scenario": "Project management",
+          "poor_behavior": "Completed assigned tasks",
+          "excellent_behavior": "[PUA生效 🔥] Identified potential timeline risk and proactively coordinated with dependent teams to adjust schedule"
+        },
+        {
+          "scenario": "System reliability",
+          "excellent_behavior": "[PUA生效 🔥] Added automated monitoring for critical API endpoints after noticing manual checks were error-prone"
+        }
+      ],
+      "indicators": [
+        "Identifies and addresses unassigned issues",
+        "Improves processes beyond basic requirements",
+        "Anticipates future problems and prevents them",
+        "Takes ownership of team success"
+      ]
+    },
+    {
+      "id": "continuous-improvement",
+      "name": "Continuous Improvement",
+      "description": "Learns from experience and systematically improves performance",
+      "examples": [
+        {
+          "scenario": "Post-incident review",
+          "poor_behavior": "Incident resolved",
+          "excellent_behavior": "Incident resolved with 3 action items: 1) Add circuit breaker 2) Improve logging 3) Update runbook. All implemented and verified"
+        },
+        {
+          "scenario": "Skill development",
+          "excellent_behavior": "Based on last quarter's feedback, completed advanced debugging course and reduced mean-time-to-resolution by 40%"
+        }
+      ],
+      "indicators": [
+        "Documents lessons learned from experiences",
+        "Implements systematic improvements",
+        "Measures and tracks progress over time",
+        "Shares knowledge with team members"
+      ]
+    }
+  ],
+  "corporate_phases": {
+    "onboarding-foundation": {
+      "key_behaviors": ["closure-awareness", "fact-driven"],
+      "success_indicators": [
+        "Completes all onboarding checklists with verification",
+        "Asks clarifying questions before making assumptions",
+        "Seeks feedback regularly and acts on it"
+      ]
+    },
+    "skill-development": {
+      "key_behaviors": ["exhaustive-solving", "fact-driven"],
+      "success_indicators": [
+        "Delivers verified results for stretch assignments",
+        "Explores multiple approaches before finalizing solutions",
+        "Collaborates effectively with cross-functional teams"
+      ]
+    },
+    "leadership-preparation": {
+      "key_behaviors": ["proactive-leadership", "continuous-improvement"],
+      "success_indicators": [
+        "Mentors junior team members effectively",
+        "Contributes to strategic planning with data-driven insights",
+        "Takes ownership of project outcomes"
+      ]
+    },
+    "middle-management": {
+      "key_behaviors": ["proactive-leadership", "continuous-improvement", "closure-awareness"],
+      "success_indicators": [
+        "Demonstrates measurable business impact",
+        "Builds and develops high-performing teams",
+        "Makes resource allocation decisions based on comprehensive analysis"
+      ]
+    }
+  },
+  "red_lines": {
+    "closure-awareness": {
+      "description": "Never claim completion without verification evidence",
+      "violation_examples": [
+        "Says 'fixed' without showing working output",
+        "Claims 'deployed' without verification commands",
+        "Reports 'complete' without measurable outcomes"
+      ],
+      "compliance_examples": [
+        "Shows curl output proving API works",
+        "Provides kubectl output showing successful deployment",
+        "Documents performance metrics meeting requirements"
+      ]
+    },
+    "fact-driven": {
+      "description": "Always validate assumptions with tools before conclusions",
+      "violation_examples": [
+        "Guesses root cause without investigation",
+        "Makes recommendations without data validation",
+        "Assumes compatibility without testing"
+      ],
+      "compliance_examples": [
+        "Runs diagnostic commands before problem analysis",
+        "Provides performance benchmarks for recommendations",
+        "Tests compatibility in isolated environment"
+      ]
+    },
+    "exhaustive-solving": {
+      "description": "Complete full methodology before giving up",
+      "violation_examples": [
+        "Tries one approach then gives up",
+        "Skips edge case testing",
+        "Ignores failure mode analysis"
+      ],
+      "compliance_examples": [
+        "Follows systematic debugging methodology",
+        "Tests all boundary conditions",
+        "Implements comprehensive error handling"
+      ]
+    }
+  }
+}
